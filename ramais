@@ -1,0 +1,125 @@
+; http://www.autohotkey.com/board/topic/90723-achieve-rainmeter-style-gui-via-gdip-library/?p=573445
+#Singleinstance, force
+Width := 230
+Gui, +LastFound
+WinSet, Transparent, 200
+Gui, Color, 99a2d5
+Gui, Margin, 0, 0
+Gui, Font, s11 fbf8f8 Bold
+Gui, Add, Progress, % "x-1 y-1 w" (Width+2) " h31 Background4d5db6 Disabled hwndHPROG"
+Control, ExStyle, -0x20000, , ahk_id %HPROG% ; propably only needed on Win XP
+Gui, Add, Text, % "x0 y0 w" Width " h30 BackgroundTrans Center 0x250 gGuiMove vCaption", Contatos
+Gui, Font, s7
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX1 gRH, RH
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX2 gti, TI
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX3 gALMOXARIFADO, ALMOXARIFADO
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX4 gFABRICA, GERENCIA FABRICA
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX5 gPCP, PCP
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX6 gPCPPROD, PCPPROD
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX7 gCULTURA, MEIOS DE CULTURA
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX8 gGLUTOL, GLUTOL
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX9 gSAC, SAC
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX10 gLCQ, LCQ
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX11 gQUALIDADE, QUALIDADE
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX12 gINOVACAO, INOVAÇÃO
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX13 gEXPEDICAO, EXPEDICAO
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX14 gPORTARIA, PORTARIA
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX15 gCOMPRAS, COMPRAS
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX16 gMARKETING, MARKETING
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX17 gFINANCEIRO, FINANCEIRO
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX18 gCOMERCIAL, COMERCIAL
+Gui, Add, Text, x20 y+20 w190 r1 +0x4000 vTX19 gClose, FECHAR
+Gui, Add, Text, x20 y+20 w190 h5 vP
+GuiControlGet, P, Pos
+H := PY + PH
+Gui, -Caption
+WinSet, Region, 0-0 w%Width% h%H% r6-6
+Gui, Show, % "w" Width " NA"
+;Gui, Show, % "w" Width " NA" " x" (A_ScreenWidth - Width) " y150"
+WinSet AlwaysOnTop
+return
+
+GuiMove:
+   PostMessage, 0xA1, 2
+return
+
+RH:
+MsgBox,  Ramal 9004 
+return
+
+TI:
+MsgBox, Ramal 9004
+return
+
+ALMOXARIFADO:
+MsgBox, Ramal 9035
+return
+
+FABRICA:
+MsgBox, Ramal 9071
+return
+
+PCP:
+MsgBox, Ramal 9074
+return
+
+PCPPROD:
+MsgBox, Ramal 9018
+return
+
+CULTURA:
+MsgBox, Ramal 9072
+return
+
+GLUTOL:
+MsgBox, Ramal 9081
+return
+
+
+SAC:
+MsgBox, Ramal 9044
+return
+
+
+LCQ:
+MsgBox, Ramal 9085
+return
+
+QUALIDADE:
+MsgBox, Ramal 9042-ANDERSON,EMILIA,LUCAS/9003-PRISCILA/9041-PAULO/9019-ROSANE/9045-MAIRE/9002-ANALISTA
+return
+
+
+INOVACAO:
+MsgBox, Ramal 9034
+return
+
+
+EXPEDICAO:
+MsgBox, Ramal 9030
+return
+
+PORTARIA:
+MsgBox, Ramal 9038
+return
+
+COMPRAS:
+MsgBox, Ramal 9017
+return
+
+MARKETING:
+MsgBox, Ramal 9006
+return
+
+FINANCEIRO:
+MsgBox, Ramal 9023
+return
+
+
+COMERCIAL:
+MsgBox, Ramal 9013 9043 9055 9027 9032 9051 9007 9008 9012 9078 9058 9001 9082 9052 9014
+return
+
+Close:
+ExitApp
+return
